@@ -1,6 +1,6 @@
 // SI-assisted: written with Claude (Anthropic), reviewed by the Space Monkeys team. See README.
 // API health and data-source status from /health, /status and /history/meta.
-import { systemApi } from "../../../app/api";
+import { API_BASE_URL, systemApi } from "../../../app/api";
 import { useApi } from "../../../shared/api/useApi";
 import { Dot, Icon, PanelTitle } from "../../../shared/ui/ui";
 import { PanelState } from "../../history/components/HistoryParts";
@@ -21,7 +21,7 @@ export function ApiStatusBadge() {
             ? worker?.running
               ? `Real-time worker running · ${status.data.live.fires ?? 0} live fires`
               : "Real-time worker stopped"
-            : (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000")}
+            : API_BASE_URL}
         </small>
       </span>
       <Icon name="info" size={13} />
