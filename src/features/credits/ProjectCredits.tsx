@@ -161,7 +161,7 @@ const SOFTWARE: { group: string; items: [string, string][] }[] = [
     items: [
       ["Google Colab (forecast model training)", "Hosted service"],
       ["Discloud (API hosting)", "Hosted service"],
-      ["Figma Make (web app scaffold and preview)", "Hosted service"],
+      ["Figma Make (SI interface generator, preview)", "Hosted service"],
       ["GitHub (source code)", "Hosted service"],
     ],
   },
@@ -267,10 +267,17 @@ export default function ProjectCredits() {
               </span>
             </li>
             <li>
+              <strong>First web interface: Figma Make</strong>
+              <span>
+                Figma Make generated the first version of this web app's interface from the team's
+                prompts; the team and Claude reworked it since.
+              </span>
+            </li>
+            <li>
               <strong>Logo: SI-generated</strong>
               <span>
-                The logo concept image was made with an AI image generator, and Claude redrew it as
-                a vector. The "SI" badge on the logo is its watermark.
+                The logo concept image was made with ChatGPT (OpenAI), and Claude redrew it as a
+                vector. The "SI" badge on the logo is its watermark.
               </span>
             </li>
             <li>
